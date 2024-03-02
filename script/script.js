@@ -16,6 +16,18 @@ const displayPhones = (phones) => {
     // get container id
     let container = document.getElementById('phone-container')
     container.innerHTML=''
+
+    // show all btn
+    let showAllContainer = document.getElementById('show-all-container')
+
+    if(phones.length > 12){
+        phones= phones.slice(0,12)
+        showAllContainer.classList.remove('hidden')
+    }else{
+        showAllContainer.classList.add('hidden')
+    }
+
+    // display data
   phones.forEach((phone) => {
     console.log(phone);
 
