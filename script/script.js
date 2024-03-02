@@ -47,14 +47,28 @@ const displayPhones = (phones) => {
         `;
     container.appendChild(div)
   });
+//   stop loading spinner
+spinner(false)
 };
 
 
 // btn
 function handleSearch(){
+    spinner(true)
     const searchField = document.getElementById('search-field')
     const searchFieldText = searchField.value;
     console.log(searchFieldText)
     loadPhone(searchFieldText)
     
+}
+
+
+// loading spinner
+const spinner = (isLoading) => {
+    let loadingSpinner = document.getElementById('loadingSpinner')
+    if(isLoading){
+        loadingSpinner.classList.remove('hidden')
+    }else{
+        loadingSpinner.classList.add('hidden')
+    }
 }
