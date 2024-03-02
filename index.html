@@ -11,12 +11,19 @@
 </head>
 
 <body>
-    <header class="container mx-auto mt-5">
-        <h1 class="text-5xl font-semibold ">
+    <header class="container mx-auto mt-10">
+        <h1 class="text-5xl font-semibold text-center">
             Phone Hunting
         </h1>
     </header>
-    <main class="container mx-auto mt-16">
+    <main class="container mx-auto mt-12">
+        <!-- search section -->
+        <section class="p-4 bg-sky-500 mb-5 rounded-2xl flex items-center gap-2">
+            <input id="search-field" type="text" placeholder="Type Here..." class="input input-bordered w-full max-w-xs" />
+            
+            <button onclick="handleSearch()" class="btn btn-active px-10">Search</button>
+>
+        </section>
         <!-- cards section -->
         <section>
             <!-- container -->
